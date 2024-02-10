@@ -16,7 +16,6 @@ class Cache(ICache):
                 db=db,
                 decode_responses=True
             )
-            # Test the connection
             redis_client.ping()
             self.redis_client = redis_client
         except Exception as e:
