@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    ports:
+      - "8000:80"
+    env_file:
+      - .env
+    depends_on:
+      - redis
+    environment:
+      - redis_host=redis
+      - redis_port=6379
+      - redis_db=0
+
+  redis:
+    image: redis:alpine
+    restart: always
+    container_name: redis
+    expose:
+      - 6379
+    ports:
+      - 6379:6379

@@ -22,7 +22,6 @@ def cache_factory() ->ICache:
         os.getenv("redis_username"),
         os.getenv("redis_password"),
         os.getenv("redis_db"))
-    print(vars(cache))
     return cache
     
 def human_age_cache_factory()-> IHumanAgeCache:
