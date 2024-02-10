@@ -16,12 +16,10 @@ async def test_human_age_feature_does_not_call_api_if_cache_returns_data():
     mock_age_api =  FakeAgeApi()
     # Act
     human = HumanAgeFeature(mock_human_age_cache, mock_age_api)
-    print("ha")
-    print(human)
     returned_age = await human.get_human_age("test")
-    print(returned_age)
-    assert returned_age.age == 1
+    
     # Assert
+    assert returned_age.age == 1
 
 
 @pytest.mark.asyncio

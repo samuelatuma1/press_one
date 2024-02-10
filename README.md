@@ -19,16 +19,10 @@ This project implements a FastAPI-based REST API for calculating the age of a hu
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/your_username/fastapi-human-age-api.git
+    git clone https://github.com/samuelatuma1/press_one.git
     ```
 
-2. Navigate to the project directory:
-
-    ```bash
-    cd fastapi-human-age-api
-    ```
-
-3. Build the Docker containers:
+2. Build the Docker containers:
 
     ```bash
     docker-compose build
@@ -39,7 +33,7 @@ This project implements a FastAPI-based REST API for calculating the age of a hu
 1. Start the Docker containers:
 
     ```bash
-    docker-compose up
+    docker-compose up --build
     ```
 
 2. Access the FastAPI application in your browser at [http://localhost:8000](http://localhost:8000).
@@ -52,18 +46,18 @@ This project implements a FastAPI-based REST API for calculating the age of a hu
 
         ```json
         {
-            "name": "John Doe"
+            "name": "doe"
         }
         ```
 
     - Response:
 
         ```json
-        {
-            "name": "John Doe",
-            "age": 30,
-            "date_of_birth": "1992-01-01"
-        }
+            {
+                "name": "doe",
+                "age": 50,
+                "date_of_birth": 1974
+            }
         ```
 
 ## Configuration
